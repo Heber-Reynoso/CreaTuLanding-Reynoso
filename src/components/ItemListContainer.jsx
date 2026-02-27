@@ -1,33 +1,30 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getProducts } from "../data/getProducts"
 import ItemList from "./ItemList"
+import { getProducts } from "../data/getProducts.js"
 
 function ItemListContainer({ mensaje }) {
-  const [items, setItems] = useState([])
+  const [productos, setProductos] = useState([])
   const { categoryId } = useParams()
 
   useEffect(() => {
     getProducts().then((data) => {
       if (categoryId) {
-        const filtered = data.filter(
-          (item) => item.category === categoryId
+        const filtrados = data.filter(
+          (prod) => prod.category === categoryId
         )
-        setItems(filtered)
+        setProductos(filtrados)
       } else {
-        setItems(data)
+        setProductos(data)
       }
     })
   }, [categoryId])
 
   return (
-    <div>
-      <h2>{mensaje}</h2>
-
-      {categoryId && <h3>Categoría: {categoryId}</h3>}
-
-      <ItemList items={items} />
-    </div>
+    <>
+      {mensaje && <h2>{mensaje}</h2>}
+      <ItemList productos={productos} />
+    </>
   )
 }
 

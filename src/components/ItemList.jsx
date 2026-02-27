@@ -1,12 +1,20 @@
 import Item from "./Item"
+import "./ItemList.css"
 
-function ItemList({ items }) {
+function ItemList({ productos }) {
   return (
-    <ul>
-      {items.map((item) => (
-        <Item key={item.id} item={item} />
+    <div className="item-list">
+      {productos.map(prod => (
+<Item
+  key={prod.id}
+  id={prod.id}
+  nombre={prod.title}
+  precio={prod.price}
+  categoria={prod.category}
+  image={prod.image}
+/>
       ))}
-    </ul>
+    </div>
   )
 }
 
