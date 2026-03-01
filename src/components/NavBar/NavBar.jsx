@@ -25,7 +25,10 @@ function NavBar() {
         </li>
       </ul>
 
-      <CartWidget />
+      {/* Aquí envolvemos CartWidget con Link */}
+      <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
+        <CartWidget />
+      </Link>
     </nav>
   )
 }
