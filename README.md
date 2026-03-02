@@ -1,16 +1,106 @@
-# React + Vite
+🛒 Proyecto React - Reynoso
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue desarrollado como práctica final del curso de React JS.
+Se trata de un E-commerce donde se pueden visualizar productos, filtrarlos por categoría, ver el detalle, agregarlos al carrito y finalizar la compra generando una orden en Firebase.
 
-Currently, two official plugins are available:
+🚀 Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clonar el repositorio.
 
-## React Compiler
+Moverse a la carpeta del proyecto:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+cd proyecto-react-reynoso
 
-## Expanding the ESLint configuration
+Instalar dependencias:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install
+
+Ejecutar el servidor local:
+
+npm run dev
+
+Es necesario contar con Node.js instalado.
+
+🌐 Funcionalidades principales
+
+📦 Listado dinámico de productos desde Firebase.
+
+🔎 Filtrado por categorías.
+
+🛍️ Detalle de producto con selector de cantidad.
+
+🛒 Carrito con:
+
+Agregar productos
+
+Eliminar productos
+
+Vaciar carrito
+
+Cálculo automático del total
+
+🧾 Checkout con validación de formulario.
+
+📄 Generación de orden en Firestore con ID único.
+
+❌ Manejo de rutas inexistentes.
+
+🗂️ Estructura del proyecto
+
+React Router DOM para la navegación por rutas.
+
+Context API para la gestión global del carrito.
+
+Firebase Firestore como base de datos.
+
+Componentes principales:
+
+ItemListContainer
+
+ItemDetailContainer
+
+CartContainer
+
+Checkout
+
+CartWidget
+
+📚 Librerías utilizadas
+
+react ^18.2.0 → Construcción de la interfaz.
+
+react-dom ^18.2.0 → Renderizado en navegador.
+
+react-router-dom ^6.30.3 → Navegación por rutas.
+
+firebase ^12.10.0 → Base de datos (Firestore) y generación de órdenes.
+
+🔥 Base de datos
+
+La aplicación utiliza Firebase Firestore para:
+
+Obtener productos desde la colección productos
+
+Filtrar por categoría
+
+Generar órdenes en la colección orders
+
+Guardar fecha con serverTimestamp()
+
+🛍️ Flujo de compra
+
+El usuario navega por los productos.
+
+Agrega productos al carrito.
+
+Accede al carrito y revisa el total.
+
+Completa el formulario en el checkout.
+
+Se genera una orden en Firestore.
+
+Se muestra el ID de compra al usuario.
+
+👨‍💻 Autor
+
+Desarrollado por Heber Reynoso 🚀
