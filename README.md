@@ -1,106 +1,95 @@
-🛒 Proyecto React - Reynoso
+# 🛒 CreaTuLanding - Reynoso
 
-Este proyecto fue desarrollado como práctica final del curso de React JS.
-Se trata de un E-commerce donde se pueden visualizar productos, filtrarlos por categoría, ver el detalle, agregarlos al carrito y finalizar la compra generando una orden en Firebase.
+Este proyecto fue desarrollado como entrega final del curso de React JS.  
+Se trata de un **E-commerce** que permite visualizar productos, filtrarlos por categoría, ver su detalle, agregarlos al carrito y generar una orden de compra en Firebase.
 
-🚀 Instalación
+---
 
-Clonar el repositorio.
+## 📦 Instalación ⚙️
 
-Moverse a la carpeta del proyecto:
+1. Clonar el repositorio.
+2. Moverse a la carpeta del proyecto:
 
-cd proyecto-react-reynoso
 
-Instalar dependencias:
+cd CreaTuLanding-Reynoso
+
+
+3. Instalar dependencias:
+
 
 npm install
 
-Ejecutar el servidor local:
+
+4. Ejecutar el servidor local:
+
 
 npm run dev
 
-Es necesario contar con Node.js instalado.
 
-🌐 Funcionalidades principales
+> Es necesario contar con Node.js instalado.
 
-📦 Listado dinámico de productos desde Firebase.
+---
 
-🔎 Filtrado por categorías.
+## 🌐 Funcionalidades principales
 
-🛍️ Detalle de producto con selector de cantidad.
+- 📦 Visualización de productos desde Firebase.
+- 🔎 Filtrado por categorías.
+- 🛍️ Vista de detalle de cada producto.
+- 🛒 Agregado de productos al carrito.
+- ❌ Eliminación individual de productos.
+- 🧹 Vaciado completo del carrito.
+- 💰 Cálculo automático del total.
+- 🧾 Formulario de checkout con validación.
+- 📄 Generación de orden en Firestore con ID único.
+- 🚫 Manejo de rutas inexistentes.
 
-🛒 Carrito con:
+---
 
-Agregar productos
+## 🗂️ Estructura del proyecto
 
-Eliminar productos
+- **React Router DOM** para la navegación por rutas.
+- **Context API** para la gestión global del carrito.
+- **Firebase Firestore** como base de datos.
+- Componentes principales:
+  - ItemListContainer
+  - ItemDetailContainer
+  - CartContainer
+  - Checkout
+  - CartWidget
 
-Vaciar carrito
+---
 
-Cálculo automático del total
+## 📚 Librerías utilizadas
 
-🧾 Checkout con validación de formulario.
+- **react** ^18.2.0  
+- **react-dom** ^18.2.0  
+- **react-router-dom** ^6.30.3  
+- **firebase** ^12.10.0  
 
-📄 Generación de orden en Firestore con ID único.
+---
 
-❌ Manejo de rutas inexistentes.
+## 🔥 Base de datos
 
-🗂️ Estructura del proyecto
+Se utiliza **Firebase Firestore** para:
 
-React Router DOM para la navegación por rutas.
+- Obtener productos desde la colección `productos`.
+- Filtrar productos por categoría.
+- Generar órdenes en la colección `orders`.
+- Guardar fecha mediante `serverTimestamp()`.
 
-Context API para la gestión global del carrito.
+---
 
-Firebase Firestore como base de datos.
+## 🛍️ Flujo de compra
 
-Componentes principales:
+1. El usuario navega por los productos.
+2. Selecciona un producto y lo agrega al carrito.
+3. Accede al carrito para revisar su compra.
+4. Completa el formulario en el checkout.
+5. Se genera una orden en Firestore.
+6. Se muestra el ID de la orden generada.
 
-ItemListContainer
+---
 
-ItemDetailContainer
+## 👨‍💻 Desarrollado por
 
-CartContainer
-
-Checkout
-
-CartWidget
-
-📚 Librerías utilizadas
-
-react ^18.2.0 → Construcción de la interfaz.
-
-react-dom ^18.2.0 → Renderizado en navegador.
-
-react-router-dom ^6.30.3 → Navegación por rutas.
-
-firebase ^12.10.0 → Base de datos (Firestore) y generación de órdenes.
-
-🔥 Base de datos
-
-La aplicación utiliza Firebase Firestore para:
-
-Obtener productos desde la colección productos
-
-Filtrar por categoría
-
-Generar órdenes en la colección orders
-
-Guardar fecha con serverTimestamp()
-
-🛍️ Flujo de compra
-
-El usuario navega por los productos.
-
-Agrega productos al carrito.
-
-Accede al carrito y revisa el total.
-
-Completa el formulario en el checkout.
-
-Se genera una orden en Firestore.
-
-Se muestra el ID de compra al usuario.
-
-👨‍💻 Autor
-
-Desarrollado por Heber Reynoso 🚀
+Heber Reynoso 🚀
